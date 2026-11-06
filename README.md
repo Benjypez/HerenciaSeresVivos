@@ -169,28 +169,3 @@ classDiagram
     PlantaConFlor <|-- Pino
     PlantaConFlor <|-- Durazno
 ```
-
-> Todas las clases tienen ademas sus getters/setters y `toString()`. Los atributos son privados (`-`)
-> y las subclases acceden a ellos mediante getters/setters.
-
-## Conceptos aplicados
-
-| Concepto | Donde se ve |
-|---|---|
-| Clase abstracta | `SerVivo` no se puede instanciar |
-| Herencia | 4 niveles: `SerVivo -> Animal -> Vertebrado -> Pinguino` |
-| `super(...)` | Cada constructor llama al constructor de su clase padre |
-| Encapsulamiento | Atributos `private` + getters/setters con validacion (`edad`, `energia`) |
-| Sobrescritura (`@Override`) | `alimentar()` en Animal/Planta, `respirar()` en Pez, `emitirSonido()`, `desplazarse()`, `florecer()` en Pino, etc. |
-| Polimorfismo | Arreglos `SerVivo[]`, `Animal[]` y `Planta[]` en `App.java` |
-
-## Como ejecutar
-
-En VS Code (con *Extension Pack for Java*): abrir `src/App.java` y pulsar **Run**.
-
-Desde la terminal:
-
-```bash
-javac -d bin -encoding UTF-8 src/App.java src/pkgSeresVivos/*.java
-java -cp bin App
-```
